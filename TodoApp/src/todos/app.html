@@ -1,7 +1,7 @@
 <section class="todoapp">
     <header class="header">
-        <h1>Tareas</h1>
-        <input id="new-todo-input" class="new-todo" placeholder="¿Qué necesita ser hecho?" autofocus>
+        <h1>To do</h1>
+        <input id="new-todo-input" class="new-todo" placeholder="Add a note" autofocus>
     </header>
     
     <!-- This section should be hidden by default and shown when there are todos -->
@@ -33,21 +33,21 @@
     <!-- This footer should hidden by default and shown when there are todos -->
     <footer class="footer">
         <!-- This should be "0 items left" by default -->
-        <span class="todo-count"><strong id="pending-count">0</strong> pendiente(s)</span>
+        <span class="todo-count"><strong id="pending-count">0</strong>Task pending</span>
         <!-- Remove this if you don't implement routing -->
         <ul class="filters">
             <li>
                 <a class="selected filtro" class="selected" href="#/">Todos</a>
             </li>
             <li>
-                <a class="filtro" href="#/active">Pendientes</a>
+                <a class="filtro" href="#/active">Note pending</a>
             </li>
             <li>
-                <a class="filtro" href="#/completed">Completados</a>
+                <a class="filtro" href="#/completed">Completed</a>
             </li>
         </ul>
         <!-- Hidden if no completed items are left ↓ -->
-        <button class="clear-completed">Borrar completados</button>
+        <button class="clear-completed">Delete completed</button>
     </footer>
 </section>
 
