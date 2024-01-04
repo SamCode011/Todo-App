@@ -1,6 +1,7 @@
  ### Todo-App
-This process is for those who want to start from scratch with setting up the Vite environment. I hope it is helpful for you.
+  ![](./img-md//to-do.gif)
 ### Installing Vite and npm environment.
+This process is for those who want to start from scratch with setting up the Vite environment. I hope it is helpful for you.
 
 To start building the project structure, you need to install  [Vite](https://vitejs.dev/guide/ "Vite"). Simply copy the command from the official Vite website.
 ```sh
