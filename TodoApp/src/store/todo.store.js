@@ -59,7 +59,7 @@ const toggleTodo = (todoId) => {
         return todo ;
     })
 }
-const deleteTodo = () => {
+const deleteTodo = (todoId) => {
     state.todos = state.todos.filter( todo => todo.id !== todoId);
 }
 const deleteCompleted = () => {

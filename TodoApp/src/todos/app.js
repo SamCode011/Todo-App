@@ -36,7 +36,7 @@ export const App = (elementId) => {
     //Html reference
 
     const newDescriptionInput = document.querySelector( ElementIDs.NewTodoInput);
-
+    const todoListUL = document.querySelector( ElementIDs.TodoList);
     //Listeners
 
     newDescriptionInput.addEventListener('keyup',(event) => {
@@ -47,5 +47,21 @@ export const App = (elementId) => {
         displayTodos();
         event.target.value='';
     });
-    console.log(newDescriptionInput);
+    
+    todoListUL.addEventListener('click', (event)  => {
+        const element = event.target.closest('[data-id]');
+        todoStore.toggleTodo( element.getAttribute('data-id'));
+        displayTodos();
+
+    })
+
+    todoListUL.addEventListener('click', (event)  => {
+        const isDestroyElement = event.target.className === 'destroy';
+        const element = event.target.closest('[data-id]');
+        if ( !element || !isDestroyElement) return;
+
+        todoStore.deleteTodo(element.getAttribute('data-id'));
+        displayTodos();
+
+    })
 }
