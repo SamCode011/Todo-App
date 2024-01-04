@@ -22,5 +22,5 @@ element.innerHtml = '';
     });
 
 
-    console.log(elementId,todos);
+   /*  console.log(elementId,todos); */
 }
