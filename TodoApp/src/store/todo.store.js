@@ -16,11 +16,12 @@ const state = {
 }
 
 const initStore = () => {
-    loadStore()
+    loadStore();
     console.log('initStore 🚀');
 }
 
 const loadStore = () => {
+    if (!localStorage.getItem('state')) return;
     const {todos = [] ,filter =Filters.All}=JSON.parse(localStorage.getItem('state'));
     state.todos = todos ;
     state.filter = filter ;
@@ -65,7 +66,7 @@ const toggleTodo = (todoId) => {
             todo.done = !todo.done;
         }
         return todo ;
-    })
+    });
     saveStateLocalStorage();
 }
 const deleteTodo = (todoId) => {
@@ -73,7 +74,7 @@ const deleteTodo = (todoId) => {
     saveStateLocalStorage();
 }
 const deleteCompleted = () => {
-    state.todos = state.todos.filter( todo => todo.done);
+    state.todos = state.todos.filter( todo => !todo.done);
     saveStateLocalStorage();
 }
 /* *
